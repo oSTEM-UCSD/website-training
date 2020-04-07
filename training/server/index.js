@@ -35,7 +35,9 @@ const Routes = require('./routes');
 app.use('/api', Routes.api);
 
 app.get("/", (req, res) => {
-  res.send("hello!");
+  res.send({
+    response: "Hello!"
+  });
 })
 
 app.listen(PORT, () => console.log(`Now listening on port ${PORT}...`));

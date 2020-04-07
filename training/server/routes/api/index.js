@@ -1,8 +1,12 @@
 const express = require('express');
 const Router = express.Router();
 
+const PostRoutes = require('./post');
+
+Router.use("/posts", PostRoutes);
+
 Router.get('/', (req, res) => {
-  res.send("this is the API router");
+  res.send("API Endpoint");
 })
 
 module.exports = Router;

@@ -20,6 +20,7 @@ db.once('open', () => { console.log("Connected to database") })
 
 app.use((req, res, next) => {
   console.log(`${req.method} request received on ${req.originalUrl}`);
+  res.contentType("application/json");
   next();
 })
 

@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Contact</title>
+  <title>Create New Blog Post</title>
 
-  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
   <nav class="navbar">
-    <div class="badge"><b>Devon's Blog 🏳️‍🌈</b></div>
+    <div class="badge"><a href="./index_complete.html"><b>Devon's Blog 🏳️‍🌈</b></a></div>
     <ul class="nav">
       <li class="nav-item">
         <a href="./index_complete.html">Home</a>
@@ -32,7 +32,7 @@
     <div class="main-content">
       <h1>Create a New Blog Post</h1>
       <section>
-        <form onsubmit="sendForm();">
+        <form name="newPost" enctype="multipart/form-data" id="form" method="POST">
           <div class="form-group">
             <div class="form-item">
               <label for="title">Post Title</label>
@@ -48,7 +48,7 @@
           <div class="form-group">
             <div class="form-item">
               <label for="images">Attach Images</label>
-              <input type="file" name="image" multiple="multiple">
+              <input type="file" name="image" multiple>
             </div>
           </div>
           <div class="form-group" style="justify-content: flex-end;">
@@ -88,11 +88,9 @@
       </section>
     </div>
   </footer>
-  <script>
-    function sendForm() {
-      alert("Form successfully submitted!");
-    }
-  </script>
+  <script type="text/javascript" src="./js/main.js"></script>
+  <script type="text/javascript" src="./js/api.js"></script>
+  <script type="text/javascript" src="./js/form.js"></script>
 </body>
 
 </html>

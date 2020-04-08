@@ -251,7 +251,7 @@ footer .container section .copyright {
 }
 
 /* Form Styles */
-form .form-group {
+.form-group {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -302,9 +302,8 @@ textarea {
   font-size: 1em;
 }
 
-form .form-group button[type="submit"] {
+.form-group button {
   height: 25px;
-  width: 80px;
   padding: 6px;
   border-radius: 5px;
   border: 1px solid red;
@@ -316,7 +315,11 @@ form .form-group button[type="submit"] {
   transition: background-color 0.2s ease-in-out;
 }
 
-form .form-group button[type="submit"]:hover {
+.form-group button[type="submit"] {
+  width: 80px;
+}
+
+.form-group button:hover {
   cursor: pointer;
   background-color: rgb(228, 2, 2);
 }

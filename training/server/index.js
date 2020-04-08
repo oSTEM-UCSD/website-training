@@ -20,7 +20,6 @@ db.once('open', () => { console.log("Connected to database") })
 
 app.use((req, res, next) => {
   console.log(`${req.method} request received on ${req.originalUrl}`);
-  res.contentType("application/json");
   next();
 })
 
@@ -30,14 +29,10 @@ app.use((err, req, res, next) => {
   next();
 })
 
+app.use(express.static("public"));
+
 const Routes = require('./routes');
 
 app.use('/api', Routes.api);
-
-app.get("/", (req, res) => {
-  res.send({
-    response: "Hello!"
-  });
-})
 
 app.listen(PORT, () => console.log(`Now listening on port ${PORT}...`));

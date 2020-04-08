@@ -1,6 +1,9 @@
 const express = require('express');
 const Router = express.Router();
 
+const multer = require('multer')();
+const firebase = require('../../helpers/firebase');
+
 const DB = require("../../database");
 
 Router.get("/", (req, res) => {
@@ -11,15 +14,16 @@ Router.get("/", (req, res) => {
     });
 })
 
-Router.post("/", (req, res) => {
+Router.post("/", multer.any(), async (req, res) => {
 
   let post = {
     title: req.body.title,
     content: req.body.content
   }
 
-  if (req.body.imageUrls) {
-    post.imageUrls = req.body.imageUrls;
+  if (req.files.length > 0) {
+    let imageUrls = await firebase.upload(req.files);
+    post.imageUrls = imageUrls;
   }
 
   DB.Post.createPost(post)

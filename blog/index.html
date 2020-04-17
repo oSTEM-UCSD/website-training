@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>This my first page!</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
 </head>
 
@@ -27,11 +28,81 @@
     </ul>
   </nav>
   <main>
-    <h1>Hello! This is my first page!</h1>
-    <section>Section 1 content</section>
-    <section>Section 2 content</section>
+    <div class="main-content">
+      <h1>Welcome to my blog!</h1>
+      <a href="#">
+        <section class="new-post">
+          <p>Add a new post</p>
+        </section>
+      </a>
+      <section>
+        <h2 class="post-header">
+          <a href="">
+            <div class="title">Blog Post #1</div>
+            <div class="date">4/17/20, 3:16 PM</div>
+          </a>
+        </h2>
+        <p>
+          This is where our post content will go.
+        </p>
+        <div class="img-wrapper">
+          <div>
+            <img src="" alt="">
+          </div>
+          <div>
+            <img src="" alt="">
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="post-header">
+          <a href="">
+            <div class="title">Blog Post #2</div>
+            <div class="date">4/17/20, 3:34 PM</div>
+          </a>
+        </h2>
+        <p>
+          This is where our second post content will go.
+        </p>
+        <div class="img-wrapper">
+          <div>
+            <img src="" alt="">
+          </div>
+          <div>
+            <img src="" alt="">
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
-  <footer>This is my footer!</footer>
+  <footer>
+    <div class="container">
+      <section style="padding-right: 2em;">
+        <p>Devon's Blog</p>
+        <p class="description">
+          Here is a short description about my page.
+        </p>
+      </section>
+      <section>
+        <ul class="footer-nav">
+          <p>Quick Links</p>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Archive</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+        <div class="copyright">&copy; Devon Rojas 2020</div>
+      </section>
+    </div>
+  </footer>
 </body>
 
 </html>
